@@ -1,0 +1,14 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #E8E8E8;
+}
+
+:focus {
+  outline-color: #3b99fc;
+  outline-style: solid;
+  outline-width: 3px;
+}
