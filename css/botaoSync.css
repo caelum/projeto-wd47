@@ -1,7 +1,13 @@
 .botaoSync {
 	line-height: 0;
-	fill: currentcolor;
 	border-radius: 50%;
+	color: white;
+}
+
+.botaoSync-icone {
+	fill: currentcolor;
+	width: 1em; 
+	height: 1em;
 }
 
 @keyframes rodaRodaJequiti {
