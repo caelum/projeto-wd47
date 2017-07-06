@@ -11,11 +11,11 @@
 		justify-content: space-around;
 	}
 
-	.muralLinha {
+	.mural--linha {
 		flex-direction: column;
 	}
 
-	.muralLinha .cartao {
+	.mural--linha .cartao {
 		flex-basis: auto;
 		width: auto;
 	}
