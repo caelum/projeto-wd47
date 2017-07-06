@@ -1,11 +1,12 @@
+// Ao clicarmos no botaoMudaLayout que possui o onclick atribuido
+let $mural = document.querySelector('.mural')
+let $btn = document.querySelector('#btnMudaLayout')
 function mudaLayout() {
-	$mural = document.querySelector('.mural')
-	
 	$mural.classList.toggle('mural--linha')
 
 	if ($mural.classList.contains('mural--linha')) {
-		document.querySelector('#btnMudaLayout').textContent = 'Bloco'
+		$btn.textContent = 'Bloco'
 	} else {
-		document.querySelector('#btnMudaLayout').textContent = 'Linhas'
+		$btn.textContent = 'Linhas'
 	}
 }
