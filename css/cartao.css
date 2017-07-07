@@ -16,20 +16,22 @@
 	transition: 0.5s;
 }
 
-.cartao.cartao--keyboardNavigationEnabled,
+.cartao.cartao--focado,
 .cartao:focus {
 	transform: scale(1.1);
 }
 
-.cartao .opcoesDoCartao-opcao {
+/*.cartao .opcoesDoCartao-opcao {
 	opacity: 0;
 	transition: opacity .2s ease;
 }
 
 .cartao:focus .opcoesDoCartao-opcao,
-.cartao--keyboardNavigationEnabled .opcoesDoCartao-opcao{
+.cartao--focado .opcoesDoCartao-opcao{
 	opacity: 1;
 }
+*/
+
 
 .cartao-conteudo {
 	white-space: pre-line;
@@ -41,6 +43,7 @@
 	width: 100%;
 }
 
+.cartao:hover .cartao-conteudo,
 .cartao:focus .cartao-conteudo,
 .cartao-conteudo:focus {
 	overflow: auto;
