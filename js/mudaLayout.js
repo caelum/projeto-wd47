@@ -1,6 +1,7 @@
 // Ao clicarmos no botaoMudaLayout que possui o onclick atribuido
 const mural = document.querySelector('.mural')
 const btn = document.querySelector('#btnMudaLayout')
+// Se 
 function mudaLayout() {
 	mural.classList.toggle('mural--linha')
 
@@ -10,3 +11,6 @@ function mudaLayout() {
 		btn.textContent = 'Linhas'
 	}
 }
+
+
+btn.classList.remove('no-js')

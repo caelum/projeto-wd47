@@ -12,3 +12,8 @@ body {
   outline-style: solid;
   outline-width: 3px;
 }
+
+
+.no-js {
+  display: none;
+}
