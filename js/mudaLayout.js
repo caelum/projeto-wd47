@@ -1,6 +1,8 @@
+(function() {
+
 // Ao clicarmos no botaoMudaLayout que possui o onclick atribuido
-let mural = document.querySelector('.mural')
-let btn = document.querySelector('#btnMudaLayout')
+const mural = document.querySelector('.mural')
+const btn = document.querySelector('#btnMudaLayout')
 // Se 
 function mudaLayout() {
 	mural.classList.toggle('mural--linha')
@@ -12,5 +14,9 @@ function mudaLayout() {
 	}
 }
 
+btn.addEventListener('click', mudaLayout)
+
 
 btn.classList.remove('no-js')
+
+})()
