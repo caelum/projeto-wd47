@@ -1,4 +1,4 @@
-(function(){
+;(function(){
 	// Seleciona Elemento
 	const btns = document.querySelectorAll('.opcoesDoCartao-remove')
 	// Adiciona um Evento de click sem usar onclick e criando função anônima
@@ -11,3 +11,4 @@
 		btns[i].classList.remove('no-js')
 	}
 })()
+
