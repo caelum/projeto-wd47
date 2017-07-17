@@ -15,5 +15,5 @@ body {
 
 
 .no-js {
-  display: none;
+  display: none!important;
 }
