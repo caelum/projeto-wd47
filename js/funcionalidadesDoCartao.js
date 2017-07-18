@@ -26,7 +26,25 @@
 		cartao.addEventListener("focusout", function(){
 			cartao.classList.remove("cartao--focado")
 		})
+	}
 
+
+	const tipoRadio = document.querySelectorAll(".opcoesDoCartao-radioTipo")
+	const tipoLabel = document.querySelectorAll(".opcoesDoCartao-tipo")
+
+	for(let k = 0; k < tipoRadio.length; k++){
+		const radio = tipoRadio[k];
+		const label = tipoLabel[k];
+
+		radio.addEventListener("onchange", function(event){
+			console.log(event.target.value)
+		})
+		label.classList.remove("no-js")
+		label.addEventListener("keydown", function(event){
+			if(event.key === "Enter" || event.key === " "){
+				event.target.click()
+			}
+		})
 	}
 
 })()
