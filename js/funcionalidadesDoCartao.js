@@ -1,7 +1,8 @@
 ;(function(){
-	// Seleciona Elemento para aplicar a função de remover
+
+	//Funcionalidade remove cartão
 	const btns = document.querySelectorAll('.opcoesDoCartao-remove')
-	// Adiciona um Evento de click sem usar onclick e criando função anônima
+	
 	for(let i = 0; i < btns.length; i++) {
 		btns[i].addEventListener('click', function() {
 			const cartao = btns[i].parentNode.parentNode
@@ -10,18 +11,14 @@
 				cartao.remove()
 			})
 		})
-		// Remove o no-js de todos os botões de remover
-		btns[i].classList.remove('no-js')
 	}
 
-	// - Pega todos os Cartões
 	const cartoes = document.querySelectorAll(".cartao")
-	// Funções dos Cartões
+
 	for(let j = 0; j < cartoes.length; j++){
 		const cartao = cartoes[j]
-		const tiposDoCartao = cartao.querySelector('.opcoesDoCartao-tipos')
 
-		// Navegação via teclado
+		// Navegação com focus via teclado nos cartões
 		cartao.addEventListener("focusin", function(){
 			cartao.classList.add("cartao--focado")
 		})
@@ -29,47 +26,21 @@
 			cartao.classList.remove("cartao--focado")
 		})
 
+		// Funcionalidade muda cor dos cartões
+		
+		cartao.addEventListener("click", function mudaCor(event){
+			const elementoSelecionado = event.target
+			const isRadioTipo = elementoSelecionado.classList.contains('opcoesDoCartao-radioTipo')
+			if(isRadioTipo) {
+				cartao.style.backgroundColor = elementoSelecionado.value
+			}
+		})
 
-
-		// Habilita o click para as labels
-		tiposDoCartao.addEventListener("keydown", function(event){
-			console.log(event.target)
+		cartao.addEventListener("keydown", function deixaClicarComEnter(event){
 			if(event.key === "Enter" || event.key === " "){
 				event.target.click()
 			}
 		})
-		// Event delegation do click do cartao
-		cartao.querySelector('.opcoesDoCartao').addEventListener('click', function() {
-			var elementoClicado = event.target
-
-			// Clicou nas cores
-			if(elementoClicado.className.match('opcoesDoCartao-radioTipo')) {
-				const corSelecionada = elementoClicado.value
-				cartao.style.backgroundColor = corSelecionada
-			}
-
-		})
-
-		// Removendo a class no-js da opcao de mudar tipo
-		tiposDoCartao.classList.remove('no-js')
 	}
-
-	// const tipoRadio = document.querySelectorAll(".opcoesDoCartao-radioTipo")
-	// const tipoLabel = document.querySelectorAll(".opcoesDoCartao-tipo")
-	//
-	// for(let k = 0; k < tipoRadio.length; k++){
-	// 	const radio = tipoRadio[k];
-	// 	const label = tipoLabel[k];
-	//
-	// 	radio.addEventListener("onchange", function(event){
-	// 		console.log(event.target.value)
-	// 	})
-		// label.classList.remove("no-js")
-	// 	label.addEventListener("keydown", function(event){
-	// 		if(event.key === "Enter" || event.key === " "){
-	// 			event.target.click()
-	// 		}
-	// 	})
-	// }
 
 })()
