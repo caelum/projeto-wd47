@@ -37,6 +37,11 @@
 	white-space: pre-line;
 	max-height: 400px;
 	overflow: hidden;
+	font-size: 1em;
+}
+
+.cartao-conteudo * {
+	font-size: 1em!important;/*desculpa a gente*/
 }
 
 .cartao-conteudo img {
@@ -60,22 +65,22 @@
 		max-width: 377px;
 	}
 
-	.cartao--textoPequeno {
-		font-size: 1em;
-		width: 11em;
-		flex-basis: 11em;
-	}
+	.cartao--textoPequeno .cartao-conteudo {
+        font-size: 1em;
+        width: 11em;
+        flex-basis: 11em;
+    }
 
-	.cartao--textoMedio {
-		font-size: 1.5em;
-		width: 9em;
-		flex-basis: 9em;
-	}
+    .cartao--textoMedio .cartao-conteudo {
+        font-size: 1.5em;
+        width: 9em;
+        flex-basis: 9em;
+    }
 
-	.cartao--textoGrande {
-		font-size: 2em;
-		width: 6em;
-		flex-basis: 6em;
-	}
+    .cartao--textoGrande .cartao-conteudo {
+        font-size: 2em;
+        width: 6em;
+        flex-basis: 6em;
+    }
 
 }
