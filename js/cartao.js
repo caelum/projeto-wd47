@@ -26,8 +26,7 @@
 			cartao.classList.remove("cartao--focado")
 		})
 
-		// Funcionalidade muda cor dos cartões
-		
+		// Funcionalidade muda cor dos cartões		
 		cartao.addEventListener("click", function mudaCor(event){
 			const elementoSelecionado = event.target
 			const isRadioTipo = elementoSelecionado.classList.contains('opcoesDoCartao-radioTipo')
