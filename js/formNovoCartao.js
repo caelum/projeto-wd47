@@ -1,5 +1,4 @@
 ;(function(){
-
     const form = document.querySelector(".formNovoCartao")
 
     form.addEventListener("submit", function(event){
@@ -16,8 +15,11 @@
                 event.target.remove()
             })
             form.insertBefore(msgErro, btnSubmit)
-        }
-    })
-
+        } else {
+            const cartao = adicionaCartaoNoMural(textarea.value.trim())
+            textarea.value = ""
+        }        
+    })    
+        
     form.classList.remove("no-js")
 })()
