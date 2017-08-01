@@ -5,8 +5,9 @@
 	window.adicionaCartaoNoMural = function(conteudoDoCartao){
 		numeroDoCartao++
 
-		const templateCartao = document.createElement("fazDeConta")
+		const templateCartao = document.createElement("tpl")
 
+		//declarativo
 		templateCartao.innerHTML = 
 		`<article id="cartao_${numeroDoCartao}" tabindex="0" class="cartao">
 			<div class="opcoesDoCartao">
@@ -37,7 +38,7 @@
 			<p class="cartao-conteudo" contenteditable tabindex="0">${conteudoDoCartao}</p>
 		</article>`
 
-		const cartao = templateCartao.querySelector(".cartao")
+		const cartao = templateCartao.querySelector("article")
 
 		cartao.addEventListener('click', function() {
 			if(event.target.classList.contains("opcoesDoCartao-remove")){
