@@ -18,20 +18,9 @@
             })
             form.insertBefore(msgErro, btnSubmit)
         } else {
-
-            //imperativo
-            // const cartao = document.createElement("article")
-            // cartao.classList.add("cartao")
-            // cartaoConteudo.setAttribute("tabindex", 0)
-            // const cartaoConteudo = document.createElement("p")
-            // cartaoConteudo.classList.add("cartao-conteudo")
-            // cartaoConteudo.setAttribute("tabindex", 0)
-            // cartaoConteudo.textContent = textarea.value
-            // cartao.appendChild(cartaoConteudo)
-            
-            const wrapperCartao = document.createElement("div")
             
             numeroDoCartao++
+            const wrapperCartao = document.createElement("tpl")
             const conteudoDoCartao = textarea.value
             wrapperCartao.innerHTML = `
             <article id="cartao_${numeroDoCartao}" tabindex="0" class="cartao">
@@ -60,11 +49,12 @@
                         Inspiração
                     </label>
                 </div>
-                <p class="cartao-conteudo" contenteditable tabindex="0">${conteudoDoCartao}</p>
+                <p class="cartao-cownteudo" contenteditable tabindex="0">${conteudoDoCartao}</p>
             </article>
             `
             
-            mural.appendChild(wrapperCartao)
+            const cartao = wrapperCartao.querySelector(".cartao")
+            mural.appendChild(cartao)
 
         }        
     })    
