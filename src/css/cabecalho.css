@@ -1,0 +1,23 @@
+.cabecalho {
+	background-color: #0082C7;
+	font-size: 1rem;
+	padding-top: .5em;
+	padding-bottom: .5em;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+	align-content: center;
+}
+
+.cabecalho-logo {
+	font-size: 2em;
+	margin-bottom: .3em;
+	font-family: "Verdana", "Helvetica", sans-serif;
+	color: rgba(255,255,255,.7);
+	display: inline-block;
+	vertical-align: middle;
+	margin-right: 1em;
+	margin-bottom: 0;
+}

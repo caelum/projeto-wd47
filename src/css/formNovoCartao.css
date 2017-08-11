@@ -1,0 +1,95 @@
+.formNovoCartao {
+	font-size: 1rem;
+	margin: 0 auto 2em;
+	background: rgba(0,0,0,.15);
+	padding-top: 1.5em;
+	padding-bottom: 1em;
+	position: relative;
+	z-index: 3;
+}
+
+.formNovoCartao-conteudo {
+	font-family: "Lucida Grande", "Helvetica", "Arial", sans-serif;
+	font-size: 1em;
+	line-height: 1.5;
+	display: block;
+	margin: 0 auto;
+	padding: .5em;
+	max-width: 35em;
+	height: 1.5em;
+	background: #FFF;
+	overflow: auto;
+	border: none;
+	resize: none;
+	width: 100%;
+	transition: height .1s linear;
+}
+
+.formNovoCartao-conteudo:focus {
+	height: 7em
+}
+
+.formNovoCartao-salvar {
+	font-size: 1em;
+	border: none;
+	display: block;
+	margin: 1em auto 0;
+	padding: .35em 1em;
+	background: rgba(70,20,170,.25);
+}
+
+.formNovoCartao-msg {
+	will-change: transform;
+	font-family: "Helvetica", "Arial", sans-serif;
+	padding: 15px;
+	box-sizing: border-box;
+    position: fixed;
+	bottom: 0;
+	left: 0;
+	width: 100vw;
+	transform: translateY(100%);
+	background: #ef5350;
+	color: rgba(0,0,0,.6);
+	font-weight: bold;
+	background: #454545;
+	color: white;
+	font-weight: normal;
+	animation: toast 5s ease forwards;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.1);
+	text-align: center;
+}
+
+.formNovoCartao-msg:first-letter {
+	text-transform: uppercase;
+}
+
+@keyframes toast {
+	0%, 100% {
+		opacity: 0;
+		transform: translateY(100%)
+	}
+	10%, 90% {
+		opacity: 1;
+		transform: translateY(0%)
+	}
+}
+
+@media (min-width: 679px){
+	.formNovoCartao-msg {
+		bottom: 5%;
+		width: auto;
+		text-align: left;
+		transform: translateX(100vw);
+	}
+
+	@keyframes toast {
+		0%, 100% {
+			opacity: 0;
+			transform: translateX(100vw)
+		}
+		10%, 90% {
+			opacity: 1;
+			transform: translateX(calc(calc(-100% + 100vw) - 5vw))
+		}
+	}
+}
