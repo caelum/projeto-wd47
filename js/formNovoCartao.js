@@ -57,6 +57,8 @@
             mural.appendChild(cartao)
 
         }        
+
+        textarea.value = ''
     })    
         
     form.classList.remove("no-js")
