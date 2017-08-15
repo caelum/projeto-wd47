@@ -18,6 +18,8 @@
         } else { 
             adicionaCartaoNoMural({conteudo: textarea.value})
         }        
+
+        textarea.value = ''
     })    
         
     form.classList.remove("no-js")
