@@ -17,8 +17,10 @@
 }
 
 .cartao.cartao--focado,
+.cartao:hover,
 .cartao:focus {
 	transform: scale(1.1);
+	z-index: 2;
 }
 
 /*.cartao .opcoesDoCartao-opcao {
