@@ -67,6 +67,11 @@
 		max-width: 377px;
 	}
 
+	.ie11 .cartao {
+		flex-grow: 0;
+		min-width: 200px;
+	}
+
 	.cartao--textoPequeno .cartao-conteudo {
         font-size: 1em;
         width: 11em;
