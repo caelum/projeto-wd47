@@ -49,7 +49,7 @@
                         Inspiração
                     </label>
                 </div>
-                <p class="cartao-cownteudo" contenteditable tabindex="0">${conteudoDoCartao}</p>
+                <p class="cartao-conteudo" contenteditable tabindex="0">${conteudoDoCartao}</p>
             </article>
             `
             
