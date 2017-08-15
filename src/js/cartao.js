@@ -30,16 +30,16 @@
                     Tarefa
                 </label>
 
-                <input type="radio" name="corDoCartao${numeroDoCartao}" value="#76EF40" id="corInspiração-cartao${numeroDoCartao}" class="opcoesDoCartao-radioTipo">
-                <label for="corInspiração-cartao${numeroDoCartao}" class="opcoesDoCartao-tipo opcoesDoCartao-opcao" style="color: #76EF40;" tabindex="0">
-                    Inspiração
-                </label>
-            </div>
-            <p class="cartao-cownteudo" contenteditable tabindex="0">${conteudoDoCartao}</p>
-        </article>
-        `
-        
-        const cartao = wrapperCartao.querySelector(".cartao")
+            <input type="radio" name="corDoCartao${numeroDoCartao}" value="#76EF40" id="corInspiração-cartao${numeroDoCartao}" class="opcoesDoCartao-radioTipo">
+            <label for="corInspiração-cartao${numeroDoCartao}" class="opcoesDoCartao-tipo opcoesDoCartao-opcao" style="color: #76EF40;" tabindex="0">
+                Inspiração
+            </label>
+        </div>
+        <p class="cartao-conteudo" contenteditable tabindex="0">${conteudoDoCartao}</p>
+    </article>
+    `
+    
+    const cartao = wrapperCartao.querySelector(".cartao")
 
         // Navegação com focus via teclado nos cartões
         cartao.addEventListener("focusin", function(){
