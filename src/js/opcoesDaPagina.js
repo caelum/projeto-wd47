@@ -36,12 +36,10 @@
 	
 	btnAjuda.classList.remove('no-js')
 	
-	const btnSalva = document.querySelector("#sync")
-
-	btnSalva.addEventListener("click", function(){
-
-		btnSalva.classList.add("botaoSync--esperando")
-		btnSalva.classList.remove("botaoSync--sincronizado")
+	const btnSalva = $("#sync")
+	btnSalva.click(function(){
+		btnSalva.addClass("botaoSync--esperando")
+		btnSalva.removeClass("botaoSync--sincronizado")
 
 		const salvadorDeCartoes = new XMLHttpRequest()
 		salvadorDeCartoes.open('POST', 'https://ceep.herokuapp.com/cartoes/salvar')
@@ -62,17 +60,16 @@
 		salvadorDeCartoes.send(JSON.stringify(infosDoMural))
 
 		salvadorDeCartoes.addEventListener("load", function(){
-			btnSalva.classList.remove("botaoSync--esperando")
-			btnSalva.classList.add("botaoSync--sincronizado")
+			btnSalva.removeClass("botaoSync--esperando")
+			btnSalva.addClass("botaoSync--sincronizado")
 		})
 
 		salvadorDeCartoes.addEventListener("error", function(){
-			btnSalva.classList.remove("botaoSync--esperando")
-			btnSalva.classList.add("botaoSync--deuRuim")
+			btnSalva.removeClass("botaoSync--esperando")
+			btnSalva.addClass("botaoSync--deuRuim")
 		})
 	})
 
-	btnSalva.classList.remove('no-js')
-
+	btnSalva.removeClass('no-js')
 
 })()
