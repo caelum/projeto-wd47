@@ -51,7 +51,7 @@
 			,cartoes: Array.from($(".cartao")).map(function(cartao){
 				return {
 					conteudo: cartao.querySelector(".cartao-conteudo").textContent
-					,cor: cartao.querySelector(".opcoesDoCartao-radioTipo:checked").value
+					,cor: cartao.style.backgroundColor
 				}
 			})
 		}
