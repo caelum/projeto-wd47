@@ -48,13 +48,13 @@
 		const cartoes = document.querySelectorAll(".cartao")
 		const infosDoMural = {
 			usuario: "artur.adam@caelum.com.br" 
-			,cartoes: $(".cartao").map(function(){
+			,cartoes: Array.from($(".cartao").map(function(){
 				const cartao = this
 				return {
 					conteudo: cartao.querySelector(".cartao-conteudo").textContent
 					,cor: cartao.querySelector(".opcoesDoCartao-radioTipo:checked").value
 				}
-			})
+			}))
 		}
 		
 		salvadorDeCartoes.send(JSON.stringify(infosDoMural))
