@@ -73,8 +73,8 @@
 
 	$.getJSON("https://ceep.herokuapp.com/cartoes/carregar?callback=?", {usuario: "artur.adam@caelum.com.br"}, function (objeto){
 		const cartoes = objeto.cartoes		
-		cartoes.forEach(function(ajuda){
-			adicionaCartaoNoMural(ajuda)
+		cartoes.forEach(function(cartao){
+			adicionaCartaoNoMural(cartao)
 		})	
 	})
 
