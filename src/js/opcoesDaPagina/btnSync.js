@@ -1,5 +1,5 @@
 ;(function(){
-    const btnSalva = $("#sync")
+    const btnSalva = $("#btnSync")
     btnSalva.click(function(){
         btnSalva.addClass("botaoSync--esperando")
         btnSalva.removeClass("botaoSync--sincronizado")
