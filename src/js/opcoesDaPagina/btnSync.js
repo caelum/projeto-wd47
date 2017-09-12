@@ -1,8 +1,8 @@
 ;(function(){
-    const btnSalva = $("#btnSync")
-    btnSalva.click(function(){
-        btnSalva.addClass("botaoSync--esperando")
-        btnSalva.removeClass("botaoSync--sincronizado")
+    const btnSync = $("#btnSync")
+    btnSync.click(function(){
+        btnSync.addClass("botaoSync--esperando")
+        btnSync.removeClass("botaoSync--sincronizado")
     
         const salvadorDeCartoes = new XMLHttpRequest()
         salvadorDeCartoes.open('POST', 'https://ceep.herokuapp.com/cartoes/salvar')
@@ -22,15 +22,15 @@
         salvadorDeCartoes.send(JSON.stringify(infosDoMural))
     
         salvadorDeCartoes.addEventListener("load", function(){
-            btnSalva.removeClass("botaoSync--esperando")
-            btnSalva.addClass("botaoSync--sincronizado")
+            btnSync.removeClass("botaoSync--esperando")
+            btnSync.addClass("botaoSync--sincronizado")
         })
     
         salvadorDeCartoes.addEventListener("error", function(){
-            btnSalva.removeClass("botaoSync--esperando")
-            btnSalva.addClass("botaoSync--deuRuim")
+            btnSync.removeClass("botaoSync--esperando")
+            btnSync.addClass("botaoSync--deuRuim")
         })
     })
     
-    btnSalva.removeClass('no-js')
+    btnSync.removeClass('no-js')
 })()
