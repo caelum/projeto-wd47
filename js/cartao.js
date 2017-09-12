@@ -20,6 +20,12 @@
 			if(isRadioTipo) {
 				cartao.style.backgroundColor = elementoSelecionado.value
 			}
+        })
+
+		cartao.addEventListener("keydown", function deixaClicarComEnter(event){
+			if(event.target.classList.contains("opcoesDoCartao-opcao") && (event.keyCode === 13 || event.keyCode === 32)){
+				event.target.click()
+			}
 		})
 	}
 
