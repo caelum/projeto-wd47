@@ -5,8 +5,9 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "http-server -c-1 dist",
-    "build": "babel src --watch --out-dir dist --copy-files --presets env"
+    "start": "npm run build && npm run server-dist",
+    "server-dist": "http-server -c-1 dist",
+    "build": "babel src --out-dir dist --copy-files --watch --presets env" 
   },
   "repository": {
     "type": "git",
