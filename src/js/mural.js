@@ -80,11 +80,17 @@
 
     }
 
-    $.getJSON("https://ceep.herokuapp.com/cartoes/carregar?callback=?", {usuario: "artur.adam@caelum.com.br"}, function (objeto){
-		const cartoes = objeto.cartoes		
-		cartoes.forEach(function(cartao){
-			adicionaCartaoNoMural(cartao)
-		})
-	})
+    $.ajax({
+        url: "https://ceep.herokuapp.com/cartoes/carregar"
+        ,method: "GET"
+        ,data: {usuario: "artur.adam@caelum.com.br"}
+        ,dataType: "jsonp"
+        ,success: function (objeto){
+            const cartoes = objeto.cartoes		
+            cartoes.forEach(function(cartao){
+                adicionaCartaoNoMural(cartao)
+            })
+        }
+    })
 
 })()
