@@ -56,6 +56,13 @@ function adicionaCartaoNoMural(cartaoObj){
         }
     })
 
+    cartao.addEventListener("keydown", function deixaClicarComEnter(event){
+        if(event.target.classList.contains("opcoesDoCartao-opcao") && (event.key === "Enter" || event.key === " ")){
+            window.getSelection().removeAllRanges()
+            event.target.click()
+        }
+    })
+
     //Funcionalidade remove cartão
     cartao.addEventListener('click', function(event) {
         const elementoSelecionado = event.target
@@ -65,13 +72,6 @@ function adicionaCartaoNoMural(cartaoObj){
                 cartao.remove()
             })
         }	
-    })
-
-    cartao.addEventListener("keydown", function deixaClicarComEnter(event){
-        if(event.target.classList.contains("opcoesDoCartao-opcao") && (event.key === "Enter" || event.key === " ")){
-            window.getSelection().removeAllRanges()
-            event.target.click()
-        }
     })
     
     mural.appendChild(cartao)
