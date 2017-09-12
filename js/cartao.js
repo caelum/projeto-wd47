@@ -21,24 +21,6 @@
 				cartao.style.backgroundColor = elementoSelecionado.value
 			}
 		})
-
-		//Funcionalidade remove cartão
-		cartao.addEventListener('click', function(event) {
-			const elementoSelecionado = event.target
-			if(elementoSelecionado.classList.contains('opcoesDoCartao-remove')){
-				cartao.classList.add("cartao--some")
-				cartao.addEventListener("transitionend", function(){
-					cartao.remove()
-				})
-			}	
-		})
-
-		cartao.addEventListener("keydown", function deixaClicarComEnter(event){
-			if(event.target.classList.contains("opcoesDoCartao-opcao") && (event.key === "Enter" || event.key === " ")){
-				window.getSelection().removeAllRanges()
-				event.target.click()
-			}
-		})
 	}
 
 })()
