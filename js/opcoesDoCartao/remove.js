@@ -10,8 +10,6 @@
 				cartao.remove()
 			})
 		})
-		// Remove o no-js de todos os botões
-		btns[i].classList.remove('no-js')
 	}
 })()
 
