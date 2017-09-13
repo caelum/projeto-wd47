@@ -72,6 +72,12 @@
                 }
             })
 
+            cartao.addEventListener("keydown", function deixaClicarComEnter(event){
+                if(event.target.classList.contains("opcoesDoCartao-opcao") && (event.key === "Enter" || event.key === " ")){
+                    event.target.click()
+                }
+            })
+
             //Funcionalidade remove cartão
             cartao.addEventListener('click', function(event) {
                 const elementoSelecionado = event.target
@@ -81,12 +87,6 @@
                         cartao.remove()
                     })
                 }	
-            })
-
-            cartao.addEventListener("keydown", function deixaClicarComEnter(event){
-                if(event.target.classList.contains("opcoesDoCartao-opcao") && (event.key === "Enter" || event.key === " ")){
-                    event.target.click()
-                }
             })
             
             mural.appendChild(cartao)
