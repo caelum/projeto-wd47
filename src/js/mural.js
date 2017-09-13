@@ -37,7 +37,7 @@
             </div>
             <p class="cartao-conteudo" contenteditable tabindex="0">${conteudoDoCartao}</p>
         </article>
-    `
+        `
     
         const cartao = wrapperCartao.querySelector(".cartao")
 
