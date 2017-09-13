@@ -85,7 +85,6 @@
 
             cartao.addEventListener("keydown", function deixaClicarComEnter(event){
                 if(event.target.classList.contains("opcoesDoCartao-opcao") && (event.key === "Enter" || event.key === " ")){
-                    window.getSelection().removeAllRanges()
                     event.target.click()
                 }
             })
