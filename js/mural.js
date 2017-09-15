@@ -6,7 +6,7 @@ function adicionaCartaoNoMural(cartaoObj){
     numeroDoCartao++
     const conteudoDoCartao = cartaoObj.conteudo
     const cartao = $(`
-    <article id="cartao_${numeroDoCartao}" tabindex="0" class="cartao">
+    <article id="cartao_${numeroDoCartao}" tabindex="0" class="cartao" style="background-color:${cartaoObj.cor}">
         <div class="opcoesDoCartao">
             <button class="opcoesDoCartao-remove opcoesDoCartao-opcao" tabindex="0">
                 <svg><use xlink:href="#iconeRemover"></use></svg>
