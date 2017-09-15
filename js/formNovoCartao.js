@@ -1,6 +1,5 @@
 ;(function(){
     const form = document.querySelector(".formNovoCartao")
-    const mural = document.querySelector(".mural")
 
     let numeroDoCartao = 0
     form.addEventListener("submit", function(event){
@@ -20,9 +19,8 @@
         } else {
             
             numeroDoCartao++
-            const wrapperCartao = document.createElement("tpl")
             const conteudoDoCartao = textarea.value
-            wrapperCartao.innerHTML = `
+            const cartao = $(`
             <article id="cartao_${numeroDoCartao}" tabindex="0" class="cartao">
                 <div class="opcoesDoCartao">
                     <button class="opcoesDoCartao-remove opcoesDoCartao-opcao" tabindex="0">
@@ -51,10 +49,9 @@
                 </div>
                 <p class="cartao-conteudo" contenteditable tabindex="0">${conteudoDoCartao}</p>
             </article>
-            `
+            `)
             
-            const cartao = wrapperCartao.querySelector(".cartao")
-            mural.appendChild(cartao)
+            $(".mural").append(cartao)
 
         }        
 
