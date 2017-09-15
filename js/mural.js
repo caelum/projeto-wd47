@@ -2,7 +2,6 @@
     "use strict"
 
     let numeroDoCartao = 0
-    const mural = document.querySelector(".mural")
 
     window.adicionaCartaoNoMural = function(cartaoObj){
         numeroDoCartao++
