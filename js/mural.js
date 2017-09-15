@@ -1,6 +1,4 @@
-
 let numeroDoCartao = 0
-const mural = document.querySelector(".mural")
 
 function adicionaCartaoNoMural(cartaoObj){    
     numeroDoCartao++
