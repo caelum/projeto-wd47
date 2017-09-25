@@ -17,7 +17,7 @@
             form.insertBefore(msgErro, btnSubmit)
         } else { 
             adicionaCartaoNoMural({conteudo: textarea.value})
-        }        
+        }      
 
         textarea.value = ''
     })    
