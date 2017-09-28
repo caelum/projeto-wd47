@@ -26,7 +26,7 @@
       </h1>
       <div class="opcoesDaPagina">
         <input type="search" placeholder="busca" id="busca" class="opcoesDaPagina-opcao no-js">
-        <button id="btnMudaLayout" class="opcoesDaPagina-opcao opcoesDaPagina-botao no-js" onclick="mudaLayout()">
+        <button id="btnMudaLayout" class="opcoesDaPagina-opcao opcoesDaPagina-botao no-js">
           Linhas
         </button>
         <button id="btnAjuda" class="opcoesDaPagina-opcao opcoesDaPagina-botao no-js">
@@ -49,7 +49,7 @@
  
       <article id="cartao_1" class="cartao">
         <div class="opcoesDoCartao">
-          <button class="opcoesDoCartao-remove opcoesDoCartao-opcao" tabindex="0">
+          <button class="opcoesDoCartao-remove opcoesDoCartao-opcao" tabindex="0" onclick="this.parentNode.parentNode.remove()">
             <svg><use xlink:href="#iconeRemover"></use></svg>
           </button>
 
