@@ -1,7 +1,7 @@
 const btn = document.querySelector('#btnMudaLayout') 
 
 function mudaTexto() {
-   if(btn.textContent == 'Blocos') {
+    if(btn.textContent == 'Blocos') {
         btn.textContent = 'Linhas'
     } else {
         btn.textContent = 'Blocos'
