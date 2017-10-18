@@ -4,6 +4,8 @@
 	background: rgba(0,0,0,.15);
 	padding-top: 1.5em;
 	padding-bottom: 1em;
+	position: relative;
+	z-index: 3;
 }
 
 .formNovoCartao-conteudo {
