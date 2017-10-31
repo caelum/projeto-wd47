@@ -1,8 +1,4 @@
 .DS_Store
-<<<<<<< HEAD
 node_modules
 dist
-=======
-dist
-node_modules
->>>>>>> modulePatternPraCriacaoDoCartao
+settings.json
