@@ -1,20 +1,22 @@
 ;(function() {
-	// Ao clicarmos no botaoMudaLayout que possui o onclick atribuido
-	const mural = document.querySelector('.mural')
-	const btn = document.querySelector('#btnMudaLayout')
+	const btn = document.querySelector('#btnMudaLayout') 
 
-	// Se 
-	function mudaLayout() {
-		mural.classList.toggle('mural--linha')
-
-		if (mural.classList.contains('mural--linha')) {
-			btn.textContent = 'Bloco'
-		} else {
+	function mudaTexto() {
+		if(btn.textContent == 'Blocos') {
 			btn.textContent = 'Linhas'
+		} else {
+			btn.textContent = 'Blocos'
 		}
 	}
 
-	btn.addEventListener('click', mudaLayout)	
-	btn.classList.remove('no-js')
+	btn.addEventListener('click', mudaTexto)
 
+	const mural = document.querySelector('.mural')
+	function mudaLayout() {
+		mural.classList.toggle('mural--linha')
+	}
+
+	btn.addEventListener('click', mudaLayout)
+
+	btn.classList.remove('no-js')
 })()
