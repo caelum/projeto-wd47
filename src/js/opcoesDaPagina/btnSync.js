@@ -18,14 +18,17 @@
                 }
             })
         }
-        
+
         salvadorDeCartoes.send(JSON.stringify(infosDoMural))
-    
+
         salvadorDeCartoes.addEventListener("load", function(){
+            const response = JSON.parse(salvadorDeCartoes.response)
+            console.log(`${response.quantidade} cartões salvos em ${response.usuario}`)
+
             btnSync.removeClass("botaoSync--esperando")
             btnSync.addClass("botaoSync--sincronizado")
         })
-    
+
         salvadorDeCartoes.addEventListener("error", function(){
             btnSync.removeClass("botaoSync--esperando")
             btnSync.addClass("botaoSync--deuRuim")
