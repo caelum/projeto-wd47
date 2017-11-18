@@ -3,14 +3,14 @@
     btnSync.click(function(){
         btnSync.addClass("botaoSync--esperando")
         btnSync.removeClass("botaoSync--sincronizado")
-    
+
         const salvadorDeCartoes = new XMLHttpRequest()
         salvadorDeCartoes.open('POST', 'https://ceep.herokuapp.com/cartoes/salvar')
         salvadorDeCartoes.setRequestHeader("Content-Type", "application/json")
-        
+    
         const cartoes = document.querySelectorAll(".cartao")
         const infosDoMural = {
-            usuario: "artur.adam@caelum.com.br" 
+            usuario: "seuemail@email.com.br"
             ,cartoes: Array.from($(".cartao")).map(function(cartao){
                 return {
                     conteudo: cartao.querySelector(".cartao-conteudo").textContent
