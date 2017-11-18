@@ -73,7 +73,7 @@
     $.ajax({
         url: "https://ceep.herokuapp.com/cartoes/carregar"
         ,method: "GET"
-        ,data: {usuario: "artur.adam@caelum.com.br"}
+        ,data: {usuario: "seuemail@email.com.br"}
         ,dataType: "jsonp"
         ,success: function (objeto){
             const cartoes = objeto.cartoes		
