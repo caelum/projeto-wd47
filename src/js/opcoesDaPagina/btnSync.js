@@ -7,7 +7,7 @@
         const salvadorDeCartoes = new XMLHttpRequest()
         salvadorDeCartoes.open('POST', 'https://ceep.herokuapp.com/cartoes/salvar')
         salvadorDeCartoes.setRequestHeader("Content-Type", "application/json")
-    
+
         const cartoes = document.querySelectorAll(".cartao")
         const infosDoMural = {
             usuario: "seuemail@email.com.br"
@@ -34,6 +34,6 @@
             btnSync.addClass("botaoSync--deuRuim")
         })
     })
-    
+
     btnSync.removeClass('no-js')
 })()
